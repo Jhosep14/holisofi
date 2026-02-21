@@ -7,6 +7,7 @@ const state = {
   search: '',
   selectedEpisodeHref: null
 };
+const MAX_DESCRIPTION_WORDS = 50;
 
 const refs = {
   detailBg: document.querySelector('#detail-bg'),
@@ -35,6 +36,14 @@ function normalize(value) {
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .trim();
+}
+
+function truncateToWords(value, maxWords = MAX_DESCRIPTION_WORDS) {
+  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+  const words = text.split(' ');
+  if (words.length <= maxWords) return text;
+  return `${words.slice(0, maxWords).join(' ')}...`;
 }
 
 function hashText(value) {
@@ -327,7 +336,7 @@ function renderDetail(group) {
   refs.detailGenres.innerHTML = (genreMap[group.category] || genreMap.Other).map((x) => `<span>${x}</span>`).join('');
   refs.detailCast.innerHTML = ['Bryan Cranston', 'Aaron Paul', 'Anna Gunn'].map((x) => `<span>${x}</span>`).join('');
   const baseSummary = `${group.name} includes ${group.totalEpisodes} episodes ordered by seasons/arcs. Use the right panel to jump faster to the episode you want.`;
-  refs.detailSummary.textContent = group.description ? `${group.description}` : baseSummary;
+  refs.detailSummary.textContent = truncateToWords(group.description ? `${group.description}` : baseSummary);
 
   refs.addLibrary.onclick = () => window.alert('Added to library (placeholder).');
   refs.watchTrailer.onclick = () => {
@@ -402,7 +411,7 @@ async function parseFromRaw() {
       episodes: group.episodes,
       totalEpisodes: group.episodes.length,
       thumbnail: thumb,
-      description: group.description || null
+      description: truncateToWords(group.description || '') || null
     };
   });
 }

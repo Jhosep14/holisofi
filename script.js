@@ -56,6 +56,7 @@ const FALLBACK_IMAGES = [
 ];
 
 const SINGLE_EPISODE_THRESHOLD = 2;
+const MAX_DESCRIPTION_WORDS = 50;
 
 function normalize(value) {
   return String(value || '')
@@ -63,6 +64,14 @@ function normalize(value) {
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .trim();
+}
+
+function truncateToWords(value, maxWords = MAX_DESCRIPTION_WORDS) {
+  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+  const words = text.split(' ');
+  if (words.length <= maxWords) return text;
+  return `${words.slice(0, maxWords).join(' ')}...`;
 }
 
 function hashText(value) {
@@ -448,7 +457,7 @@ async function getWikiData(title) {
     const data = await response.json();
     return {
       image: data?.originalimage?.source || data?.thumbnail?.source || null,
-      description: data?.extract || null
+      description: truncateToWords(data?.extract || '')
     };
   } catch (_error) {
     return { image: null, description: null };
@@ -469,7 +478,7 @@ async function hydrateInternetImages() {
     const cached = cache[group.wiki];
     if (cached) {
       if (cached.image) group.thumbnail = cached.image;
-      if (cached.description) group.description = cached.description;
+      if (cached.description) group.description = truncateToWords(cached.description);
     } else {
       needsFetch.push(group);
     }
@@ -499,10 +508,10 @@ async function hydrateInternetImages() {
       const group = state.groups.find((item) => item.id === result.id);
       if (group) {
         if (result.image) group.thumbnail = result.image;
-        if (result.description) group.description = result.description;
+        if (result.description) group.description = truncateToWords(result.description);
       }
       /* Cache the result (even if null, to avoid re-fetching) */
-      cache[result.wiki] = { image: result.image, description: result.description };
+      cache[result.wiki] = { image: result.image, description: truncateToWords(result.description) };
     });
 
     /* Re-render progressively so user sees thumbnails appearing */
@@ -573,7 +582,9 @@ function openSinglePanel(group) {
   refs.singleCover.src = group.thumbnail;
   refs.singleTitle.textContent = group.name;
   refs.singleStats.innerHTML = `<span>${duration} min</span><span>${year}</span><span>${rating} IMDb</span>`;
-  refs.singleSummary.textContent = group.description || `${group.name} is available as a single title. Press Show to play inside the app.`;
+  refs.singleSummary.textContent = truncateToWords(
+    group.description || `${group.name} is available as a single title. Press Show to play inside the app.`
+  );
 
   const genreMap = {
     Anime: ['Action', 'Adventure', 'Fantasy'],
@@ -662,7 +673,7 @@ function setHeroIndex(nextIndex) {
   const active = state.heroSlides[index];
   refs.spotKicker.textContent = active.kicker;
   refs.spotTitle.textContent = active.title;
-  refs.spotDescription.textContent = active.description;
+  refs.spotDescription.textContent = truncateToWords(active.description);
   refs.spotFeatureMeta.textContent = active.meta || '';
 
   if (!active.group) {
