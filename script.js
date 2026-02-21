@@ -418,7 +418,7 @@ const WIKI_LOOKUP = {
   "Boku no Pico": "Boku no Pico"
 };
 
-const THUMB_CACHE_KEY = 'holisofi-thumb-cache-v1';
+const THUMB_CACHE_KEY = 'holisofi-thumb-cache-v3';
 
 function loadThumbCache() {
   try {
@@ -718,7 +718,7 @@ function openGroup(group) {
     return;
   }
 
-  localStorage.setItem('holisofi-groups-cache-v3', JSON.stringify(state.groups));
+  localStorage.setItem('holisofi-groups-cache-v4', JSON.stringify(state.groups));
   window.location.href = `group.html?id=${encodeURIComponent(group.id)}`;
 }
 

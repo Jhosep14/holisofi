@@ -408,7 +408,7 @@ async function parseFromRaw() {
 }
 
 async function loadGroups() {
-  const cached = JSON.parse(localStorage.getItem('holisofi-groups-cache-v3') || '[]');
+  const cached = JSON.parse(localStorage.getItem('holisofi-groups-cache-v4') || '[]');
   if (Array.isArray(cached) && cached.length > 0) return cached;
   return parseFromRaw();
 }
