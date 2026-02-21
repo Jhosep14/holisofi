@@ -126,7 +126,7 @@ function deriveBucket(group, episode) {
   if (group.id === 'dragon-ball') {
     if (/\bgt\b/.test(title)) return { key: 'db-gt', label: 'Dragon Ball GT', order: 2 };
     if (/zuper|super/.test(title)) return { key: 'db-super', label: 'Dragon Ball Super', order: 3 };
-    if (/\bova\b/.test(title)) return { key: 'db-ova', label: 'Dragon Ball OVA', order: 4 };
+    if (/\bova\b/.test(title) && !title.includes('148')) return { key: 'db-ova', label: 'Dragon Ball OVA', order: 4 };
     if (/peli|pelicula|movie/.test(title)) return { key: 'db-movies', label: 'Dragon Ball Movies', order: 5 };
     return { key: 'db-z', label: 'Dragon Ball Z', order: 1 };
   }
@@ -408,7 +408,7 @@ async function parseFromRaw() {
 }
 
 async function loadGroups() {
-  const cached = JSON.parse(localStorage.getItem('holisofi-groups-cache-v4') || '[]');
+  const cached = JSON.parse(localStorage.getItem('holisofi-groups-cache-v5') || '[]');
   if (Array.isArray(cached) && cached.length > 0) return cached;
   return parseFromRaw();
 }

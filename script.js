@@ -718,7 +718,7 @@ function openGroup(group) {
     return;
   }
 
-  localStorage.setItem('holisofi-groups-cache-v4', JSON.stringify(state.groups));
+  localStorage.setItem('holisofi-groups-cache-v5', JSON.stringify(state.groups));
   window.location.href = `group.html?id=${encodeURIComponent(group.id)}`;
 }
 
