@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofi TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-layer"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="title-wrap">
+        <h1>Sofi TV</h1>
+        <p class="kicker">Curated anime, movies and streams</p>
+      </div>
+      <div class="top-controls">
+        <label><input id="search-input" type="search" placeholder="Search" /></label>
+        <button id="login-btn" class="toggle-btn" type="button">Login</button>
+      </div>
+    </header>
+
+    <section id="spotlight" class="spotlight">
+      <button id="hero-prev" class="hero-nav hero-prev" type="button" aria-label="Previous">‹</button>
+      <div class="hero-carousel">
+        <div id="hero-track" class="hero-track"></div>
+      </div>
+      <button id="hero-next" class="hero-nav hero-next" type="button" aria-label="Next">›</button>
+      <div class="spotlight-overlay"></div>
+      <div class="spotlight-inner">
+        <p id="spot-kicker">Sofi TV</p>
+        <h2 id="spot-title">Welcome to Sofi TV</h2>
+        <p id="spot-description">Discover grouped content in one place.</p>
+        <p id="spot-feature-meta"></p>
+        <div class="spotlight-actions">
+          <button id="spot-open" class="primary-btn" type="button">Open Featured Group</button>
+          <button id="spot-fav" class="secondary-btn" type="button">Favorite Featured</button>
+        </div>
+      </div>
+      <div id="hero-dots" class="hero-dots"></div>
+    </section>
+
+    <section id="category-strip" class="category-strip"></section>
+
+    <section id="groups-root" class="groups-root"></section>
+  </main>
+
+  <aside id="single-panel" class="single-panel" aria-hidden="true">
+    <button id="close-single-panel" class="close-panel" type="button">×</button>
+    <div class="single-cover-wrap">
+      <img id="single-cover" class="single-cover" alt="Cover" />
+    </div>
+    <div class="single-content">
+      <h2 id="single-title">Title</h2>
+      <div id="single-stats" class="single-stats"></div>
+      <p id="single-summary" class="single-summary"></p>
+
+      <section>
+        <h4>GENRES</h4>
+        <div id="single-genres" class="chip-row"></div>
+      </section>
+
+      <section>
+        <h4>CAST</h4>
+        <div id="single-cast" class="chip-row"></div>
+      </section>
+
+      <section>
+        <h4>DIRECTORS</h4>
+        <div id="single-directors" class="chip-row"></div>
+      </section>
+
+      <div class="single-actions">
+        <button id="single-library" class="icon-action" type="button">◎</button>
+        <button id="single-trailer" class="icon-action" type="button">🎬</button>
+        <button id="single-play" class="play-action" type="button">▶ Show</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="player-modal" class="player-modal" aria-hidden="true">
+    <div class="player-shell">
+      <button id="close-player" class="close-panel" type="button">×</button>
+      <iframe id="player-frame" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <template id="group-card-template">
+    <article class="group-card reveal">
+      <button class="card-media" type="button">
+        <img class="card-image" alt="Group thumbnail" loading="lazy" />
+        <span class="card-chip"></span>
+      </button>
+      <div class="card-body">
+        <p class="card-title"></p>
+        <p class="card-meta"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="alias_map.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

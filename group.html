@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group Detail - Sofi TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="group.css" />
+</head>
+
+<body>
+  <main id="detail-page" class="detail-page">
+    <img id="detail-bg" class="detail-bg" alt="Background" />
+    <div class="detail-overlay"></div>
+
+    <header class="detail-topbar">
+      <a class="back-link" href="index.html">‹ Back</a>
+      <div class="top-icons">
+        <button type="button">＋</button>
+        <button type="button">◯</button>
+      </div>
+    </header>
+
+    <section class="detail-layout">
+      <article class="detail-left">
+        <h1 id="detail-title">Loading...</h1>
+        <div id="detail-meta" class="detail-meta"></div>
+
+        <section>
+          <h4>GENRES</h4>
+          <div id="detail-genres" class="chips"></div>
+        </section>
+
+        <section>
+          <h4>CAST</h4>
+          <div id="detail-cast" class="chips"></div>
+        </section>
+
+        <section>
+          <h4>SUMMARY</h4>
+          <p id="detail-summary" class="summary"></p>
+        </section>
+
+        <div class="detail-actions">
+          <button id="add-library" type="button">Add to Library</button>
+          <button id="watch-trailer" type="button">Trailer</button>
+          <button id="like-btn" type="button">👍</button>
+          <button id="fav-btn" type="button">♡</button>
+          <button id="share-btn" type="button">↗</button>
+        </div>
+      </article>
+
+      <aside class="episodes-panel">
+        <div class="episodes-head">
+          <button id="prev-episode" type="button">‹ Prev</button>
+          <label>
+            <select id="season-select"></select>
+          </label>
+          <button id="next-episode" type="button">Next ›</button>
+        </div>
+
+        <div class="episodes-search">
+          <input id="episode-search" type="search" placeholder="search videos" />
+        </div>
+
+        <div id="episodes-list" class="episodes-list"></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="player-modal" class="player-modal" aria-hidden="true">
+    <div class="player-shell">
+      <button id="close-player" class="close-player" type="button">×</button>
+      <iframe id="player-frame" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <template id="episode-template">
+    <button class="episode-item" type="button">
+      <img class="episode-thumb" alt="Episode" loading="lazy" />
+      <div class="episode-text">
+        <p class="episode-title"></p>
+        <p class="episode-meta"></p>
+      </div>
+    </button>
+  </template>
+
+  <script src="alias_map.js"></script>
+  <script src="group.js"></script>
+</body>
+
+</html>
