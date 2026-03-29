@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="alias_map.js"></script>
+  <script src="data.js"></script>
+  <script src="content_state.js"></script>
+  <script src="reference_images.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="app.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+  <nav class="site-header site-header--glass">
+    <div class="site-header-brand-group">
+      <a href="index.html" class="flex items-center shrink-0">
+        <img alt="Sofi TV" class="h-14 md:h-18 w-auto object-contain" src="images/logo.png" />
+      </a>
+      <div class="site-header-links">
+        <a class="site-nav-link site-nav-link--pill" href="index.html">Home</a>
+        <a class="site-nav-link site-nav-link--active" href="movies.html">Movies</a>
+        <a class="site-nav-link site-nav-link--pill" href="animes.html">Animes</a>
+        <a class="site-nav-link site-nav-link--pill" href="series.html">Series</a>
+        <a class="site-nav-link site-nav-link--pill" href="my_list.html">My List</a>
+      </div>
+    </div>
+    <div class="site-header-actions">
+      <a href="search.html" class="site-icon-link site-icon-link--surface site-icon-link--scale" aria-label="Buscar">
+        <span class="material-symbols-outlined" data-icon="search">search</span>
+      </a>
+      <button class="site-icon-button site-icon-button--surface site-icon-button--scale" type="button"
+        data-icon="notifications">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+      <div class="site-avatar-shell site-avatar-shell--circle">
+        <img alt="User Profile Avatar" class="site-avatar-image clickable-avatar"
+          onclick="window.location.href='profile.html'"
+          data-alt="close-up portrait of a professional man with a neutral expression in a high-end studio setting with soft side lighting"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOjHxonEBPvNBZoovBdJndIzLvDR5vFW_lyAZ2p9ex5OtCd0WCsmkAZtZ3r8x3OzmBctlLetpB7yhIGeXsmJomUNoyektTUSGRXGQ_MYWXPz5Y2iM7oz_zAuuMBqbcuebeOeEUw-qPkBhZ95-xm2qejetj3ODYkGBXvUiGYqHBrBI2bw7PqHoJRyiy2EY1wuFAikjgbhRx0A1WWc2BU1aHfmkXb95SRS2_JUc-5iKvb-3cfh1CSA7jAUOZu2O4cWfygRJglFDWu1E" />
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative w-full h-[921px] flex items-center px-8 md:px-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover"
+        data-alt="cinematic digital art of a futuristic cyberpunk city at night with neon red lighting and rain falling, moody and atmospheric"
+        src="images/Sofi_marvel.png" />
+      <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-2xl mt-20">
+      <div class="flex items-center gap-3 mb-4">
+        <span
+          class="px-3 py-1 bg-primary-container text-white text-[10px] font-bold tracking-widest uppercase rounded-sm">Original
+          Series</span>
+        <span class="text-on-surface-variant text-xs font-semibold uppercase tracking-widest">Season 1 Now
+          Streaming</span>
+      </div>
+      <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-on-surface leading-tight mb-6 tracking-tighter">
+        Neo Genesis:<br /><span class="text-primary-container">Rebirth</span></h1>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-lg">
+        In a world where memories are currency, one rogue cyborg must reclaim his past to prevent a technological
+        extinction. A visceral journey through a digital noir landscape.
+      </p>
+      <div class="flex flex-wrap items-center gap-4">
+        <button
+          class="bg-gradient-to-br from-primary-container to-[#b30710] text-on-primary-container px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-all shadow-lg shadow-primary-container/20">
+          <span class="material-symbols-outlined icon-fill" data-icon="play_arrow">play_arrow</span>
+          Watch Now
+        </button>
+        <button
+          class="bg-surface-bright/20 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-surface-bright/40 transition-all">
+          <span class="material-symbols-outlined" data-icon="add">add</span>
+          My List
+        </button>
+      </div>
+      <div class="mt-12 flex items-center gap-8">
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-on-surface">98%</span>
+          <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Match</span>
+        </div>
+        <div class="w-px h-8 bg-outline-variant/30"></div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-on-surface">2024</span>
+          <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Release</span>
+        </div>
+        <div class="w-px h-8 bg-outline-variant/30"></div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-bold text-on-surface">18+</span>
+          <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="relative z-10 px-8 md:px-16 -mt-16 space-y-16 pb-24">
+
+    <div id="catalog-container" class="space-y-16 px-8 md:px-16 -mt-20 relative z-20 pb-20 w-full">
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-grid site-footer-grid--two site-footer-grid--items-start">
+      <div class="space-y-6">
+        <span class="site-footer-brand site-footer-brand--headline">Digital Theater</span>
+        <p class="site-footer-copy max-w-sm leading-relaxed">
+          © 2024 Digital Theater. All rights reserved. Cinematic Depth &amp; Tonal Precision. The premier destination
+          for elite storytelling and visual excellence.
+        </p>
+        <div class="site-footer-socials">
+          <span class="material-symbols-outlined site-footer-social" data-icon="facebook">social_leaderboard</span>
+          <span class="material-symbols-outlined site-footer-social" data-icon="p_x">brand_family</span>
+          <span class="material-symbols-outlined site-footer-social" data-icon="instagram">camera</span>
+        </div>
+      </div>
+      <div class="site-footer-links-grid">
+        <div class="site-footer-link-column">
+          <a class="site-footer-link" href="#">Privacy Policy</a>
+          <a class="site-footer-link" href="#">Terms of Service</a>
+          <a class="site-footer-link" href="#">Help Center</a>
+        </div>
+        <div class="site-footer-link-column">
+          <a class="site-footer-link" href="#">Cookie Preferences</a>
+          <a class="site-footer-link" href="#">Contact Us</a>
+          <a class="site-footer-link site-footer-link--accent" href="#">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

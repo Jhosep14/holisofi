@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Digital Theater - Discovery</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="alias_map.js"></script>
+  <script src="data.js"></script>
+  <script src="content_state.js"></script>
+  <script src="reference_images.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="app.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+  <!-- Top Navigation Bar -->
+  <nav class="site-header site-header--glass site-header--gradient">
+    <div class="site-header-brand-group site-header-brand-group--tight">
+      <a href="index.html" class="flex items-center shrink-0">
+        <img alt="Sofi TV" class="h-14 md:h-18 w-auto object-contain" src="images/logo.png" />
+      </a>
+      <div class="site-header-links">
+        <a class="site-nav-link site-nav-link--active" href="index.html">Home</a>
+        <a class="site-nav-link" href="movies.html">Movies</a>
+        <a class="site-nav-link" href="animes.html">Animes</a>
+        <a class="site-nav-link" href="series.html">Series</a>
+        <a class="site-nav-link" href="my_list.html">My List</a>
+      </div>
+    </div>
+    <div class="site-header-actions">
+      <a href="search.html" class="site-icon-link" aria-label="Buscar">
+        <span class="material-symbols-outlined" data-icon="search">search</span>
+      </a>
+      <button class="site-icon-button" type="button">
+        <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+        <span class="site-icon-badge"></span>
+      </button>
+      <div class="site-avatar-shell site-avatar-shell--rounded">
+        <img alt="User Profile Avatar" class="site-avatar-image clickable-avatar"
+          onclick="window.location.href='profile.html'"
+          data-alt="close-up portrait of a young man with a slight smile and professional lighting on a dark minimalist background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9aNlIIjhmJbXcHr2roh3dwsdmL9Rgjxhc_zF96rxHBkRmieWxCy6UVR0YodIkXScA48X6hChrH5m4oNjNmNi4_NNQdj4btKHsPRoWuZqFnnaVXAj4BBRUvTnug7q8i0pbVeMX_bbkF-qkv5mrdJDB9dw35Z4I57nWXgGmcbVz2VDKavJenTc812LzBhFd-Kjel-EWm7UH3AlstA4Ze_cYrrEluZCuNCkVG8pKpJ84WwA7Pp8t4lnlgskXFP2VpYsdFH0TVgoYzD0" />
+      </div>
+    </div>
+  </nav>
+  <main class="relative">
+    <section class="relative w-full h-[921px] flex items-end pb-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img alt="Neon Rebellion Background" class="w-full h-full object-cover"
+          data-alt="cinematic wide shot of a futuristic cyberpunk city at night with glowing red and blue neon lights, heavy rain, and dark noir atmosphere"
+          src="images/sofi_monsterverse.png" />
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent"></div>
+      </div>
+      <div class="relative z-10 px-8 md:px-16 max-w-4xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span
+            class="px-2 py-1 bg-primary-container text-[10px] font-black tracking-widest uppercase rounded-sm">Original</span>
+          <span class="text-on-surface-variant font-headline text-sm font-bold tracking-widest uppercase">Films
+            Premiere</span>
+        </div>
+        <h1
+          class="font-headline font-black text-6xl md:text-8xl tracking-tighter text-on-surface mb-6 uppercase leading-none">
+          Sofi<br />Marvel</h1>
+        <p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-8 leading-relaxed font-light">
+          Enjoy with Sofi to the best Marvel Films and follow the adventure of the MCU.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button
+            class="bg-gradient-to-br from-[#ffb4aa] to-[#e50914] text-on-primary-container px-10 py-4 rounded-full font-headline font-extrabold text-sm uppercase flex items-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary-container/20">
+            <span class="material-symbols-outlined icon-fill" data-icon="play_arrow">play_arrow</span>
+            Play Now
+            <a href="movies.html"></a>
+          </button>
+          <button
+            class="bg-surface-bright/20 backdrop-blur-md border border-outline-variant/30 text-on-surface px-10 py-4 rounded-full font-headline font-extrabold text-sm uppercase flex items-center gap-2 hover:bg-white/5 transition-all active:scale-95">
+            <span class="material-symbols-outlined" data-icon="add">add</span>
+            My List
+          </button>
+        </div>
+      </div>
+    </section>
+    <div id="catalog-container" class="space-y-16 px-8 md:px-16 -mt-20 relative z-20 pb-20 w-full">
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-grid site-footer-grid--two">
+      <div class="space-y-6">
+        <div class="site-footer-brand">Digital Theater</div>
+        <div class="site-footer-links-grid">
+          <a class="site-footer-link" href="#">Privacy Policy</a>
+          <a class="site-footer-link" href="#">Terms of Service</a>
+          <a class="site-footer-link" href="#">Help Center</a>
+          <a class="site-footer-link" href="#">Cookie Preferences</a>
+          <a class="site-footer-link" href="#">Contact Us</a>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between items-start md:items-end">
+        <div class="site-footer-socials mb-4">
+          <span class="material-symbols-outlined site-footer-social">public</span>
+          <span class="material-symbols-outlined site-footer-social">chat</span>
+          <span class="material-symbols-outlined site-footer-social">smart_display</span>
+        </div>
+        <p class="site-footer-copy site-footer-text-left site-footer-text-md-right">
+          © 2026 Digital Theater. All rights reserved.<br />
+          Cinematic Depth &amp; Tonal Precision.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Bottom Nav for Mobile -->
+  <div class="site-mobile-nav">
+    <a class="site-mobile-nav-link site-mobile-nav-link--active" href="index.html">
+      <span class="material-symbols-outlined icon-fill" data-weight="fill">home</span>
+      <span class="site-mobile-nav-label site-mobile-nav-label--active">Home</span>
+    </a>
+    <a class="site-mobile-nav-link" href="movies.html">
+      <span class="material-symbols-outlined">movie</span>
+      <span class="site-mobile-nav-label">Movies</span>
+    </a>
+    <a class="site-mobile-nav-link" href="series.html">
+      <span class="material-symbols-outlined">live_tv</span>
+      <span class="site-mobile-nav-label">Series</span>
+    </a>
+    <a class="site-mobile-nav-link" href="my_list.html">
+      <span class="material-symbols-outlined">list</span>
+      <span class="site-mobile-nav-label">My List</span>
+    </a>
+    <a class="site-mobile-nav-link" href="profile.html">
+      <span class="material-symbols-outlined">person</span>
+      <span class="site-mobile-nav-label">Profile</span>
+    </a>
+  </div>
+</body>
+
+</html>

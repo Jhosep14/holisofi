@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Digital Theater | Movie Details</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="alias_map.js"></script>
+  <script src="data.js"></script>
+  <script src="content_state.js"></script>
+  <script src="reference_images.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="player.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+  <!-- TopAppBar -->
+  <header class="site-header site-header--profile">
+    <div class="site-header-brand-group">
+      <a href="index.html" class="flex items-center shrink-0">
+        <img alt="Sofi TV" class="h-10 md:h-12 w-auto object-contain" src="images/logo.png" />
+      </a>
+      <nav class="site-header-links">
+        <a class="site-nav-link site-nav-link--plain" href="index.html">Home</a>
+        <a class="site-nav-link site-nav-link--active" href="movies.html">Movies</a>
+        <a class="site-nav-link site-nav-link--plain" href="animes.html">Animes</a>
+        <a class="site-nav-link site-nav-link--plain" href="series.html">Series</a>
+        <a class="site-nav-link site-nav-link--plain" href="my_list.html">My List</a>
+      </nav>
+    </div>
+    <div class="site-header-actions">
+      <a href="search.html" class="site-icon-link site-icon-link--surface" aria-label="Buscar">
+        <span class="material-symbols-outlined">search</span>
+      </a>
+      <button class="site-icon-button site-icon-button--surface" type="button">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+      <div class="site-avatar-shell site-avatar-shell--compact">
+        <img alt="User Profile Avatar" class="site-avatar-image clickable-avatar"
+          onclick="window.location.href='profile.html'"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY2y-UlUD8EoVCJ7uLmLhSji2FuyQhtNQii4aaxQGYNaYVJ3qpRQsuqegAdIz1RqAAkevlgX4stxHU-iPrGZvs2WKcBxbNZG35dQgtTEvTZFL8nYElra4vUtxShYO7cWTt-b9usgkUczHTS_Pa3fQ6I1c1V7m_XuDcj0Q9yqZ9c-WlbtYIhQ9tTqNSejsw07DFEyJJhA5DiXFbdpYA-kyXIGPKm7_9WLzANPqQjdZQj0-_eaM_zGjIQUsmHzKhhwjIx64V6iXv520" />
+      </div>
+    </div>
+  </header>
+  <main class="relative min-h-screen">
+    <section class="relative h-[870px] w-full overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img alt="Movie Backdrop" class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv3TJTXa7keqy5w9hulr_Fhnwh2BQORINpHhyDaEN6yRAoHr-2BYdcWKaCA-XXA28lEQTVnKZNE6My0xOJPrDef3momzE_rnqkcrvQgCi6Y8IM8UMBOqTFdrJsYAEDPf8gYMATRtDtammH71Rt51K_IZF3tL2jVpH-xXlczK5wuNNH7rWsezA0CUfivjZlMoAAZjifXAJODeeVi69PqyzHQmhmV63eLR3a7_7NsbStg80-wswCzdlbXNYsHMdaSnHtKE9wNOWHI6w" />
+        <div class="absolute inset-0 backdrop-gradient"></div>
+      </div>
+      <!-- Content Info Panel -->
+      <div class="relative z-10 flex flex-col justify-end h-full px-8 pb-16 md:px-16 max-w-5xl">
+        <div class="mb-4 flex items-center gap-4 text-on-surface-variant font-medium text-sm">
+          <span class="flex items-center gap-1"><span
+              class="material-symbols-outlined text-[16px] icon-fill">star</span> 9.2 Rating</span>
+          <span>2024</span>
+          <span
+            class="px-2 py-0.5 border border-outline-variant/30 rounded text-[10px] tracking-widest font-bold uppercase">18+</span>
+          <span>2h 45m</span>
+          <div class="flex gap-2 ml-4">
+            <span class="px-2 py-0.5 bg-surface-container rounded text-xs">4K</span>
+            <span class="px-2 py-0.5 bg-surface-container rounded text-xs">HDR</span>
+            <span class="px-2 py-0.5 bg-surface-container rounded text-xs">Dolby Atmos</span>
+          </div>
+        </div>
+        <h1
+          class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 text-on-surface leading-tight">
+          THE SILENT<br /><span class="text-primary">ECLIPSE</span></h1>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="text-primary-fixed-dim text-sm font-medium">Sci-Fi</span>
+          <span class="text-on-surface-variant text-sm opacity-50">&bull;</span>
+          <span class="text-primary-fixed-dim text-sm font-medium">Thriller</span>
+          <span class="text-on-surface-variant text-sm opacity-50">&bull;</span>
+          <span class="text-primary-fixed-dim text-sm font-medium">Psychological</span>
+        </div>
+        <p class="text-on-surface-variant text-base md:text-lg max-w-2xl mb-8 leading-relaxed font-light">
+          In a world where sound has become a lethal weapon, a lone cartographer must navigate the fractured remains of
+          Neo-Tokyo to find the frequency that can restart the sun before the eternal eclipse consumes humanity.
+        </p>
+        <!-- Actions -->
+        <div class="flex flex-wrap items-center gap-4">
+          <button
+            class="flex items-center gap-2 px-10 py-4 bg-gradient-to-br from-[#ffb4aa] to-[#e50914] text-white font-bold rounded-full hover:scale-105 active:scale-100 transition-transform shadow-lg shadow-primary-container/20">
+            <span class="material-symbols-outlined icon-fill">play_arrow</span>
+            Play Now
+          </button>
+          <button
+            class="flex items-center justify-center w-14 h-14 rounded-full border border-outline-variant/30 bg-surface-container/40 backdrop-blur-md hover:bg-surface-container-high transition-colors">
+            <span class="material-symbols-outlined">add</span>
+          </button>
+          <div
+            class="flex items-center gap-2 bg-surface-container/40 backdrop-blur-md border border-outline-variant/30 rounded-full p-1">
+            <button
+              class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+              <span class="material-symbols-outlined text-sm">thumb_up</span>
+            </button>
+            <div class="w-px h-6 bg-outline-variant/30"></div>
+            <button
+              class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+              <span class="material-symbols-outlined text-sm">thumb_down</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="catalog-container" class="space-y-16 px-8 md:px-16 -mt-20 relative z-20 pb-20 w-full">
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-grid site-footer-grid--four">
+      <div class="col-span-2 md:col-span-1">
+        <span class="site-footer-brand site-footer-brand--accent mb-4 block">Digital Theater</span>
+        <p class="site-footer-copy max-w-xs">Experience cinematic storytelling like never before.
+          Premium quality, immersive sound, and exclusive originals.</p>
+      </div>
+      <div>
+        <h4 class="text-[#e5e2e1] font-bold text-sm mb-4">Explore</h4>
+        <ul class="space-y-2">
+          <li><a class="site-footer-link" href="#">Help Center</a></li>
+          <li><a class="site-footer-link" href="#">Account</a></li>
+          <li><a class="site-footer-link" href="#">Media Center</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[#e5e2e1] font-bold text-sm mb-4">Legal</h4>
+        <ul class="space-y-2">
+          <li><a class="site-footer-link" href="#">Privacy</a></li>
+          <li><a class="site-footer-link" href="#">Contact Us</a></li>
+          <li><a class="site-footer-link" href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[#e5e2e1] font-bold text-sm mb-4">Connect</h4>
+        <div class="site-footer-socials">
+          <span class="material-symbols-outlined site-footer-social">public</span>
+          <span class="material-symbols-outlined site-footer-social">language</span>
+          <span class="material-symbols-outlined site-footer-social">forum</span>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer-bottom pt-6 text-center">
+      <p class="site-footer-copy">&copy; 2026 Digital Theater. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     NETFLIX-STYLE IN-PAGE VIDEO PLAYER — REBUILT
+     ═══════════════════════════════════════════════════════════ -->
+  <div id="player-overlay" class="player-overlay">
+    <div class="player-dialog" id="player-dialog" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+      <div class="player-dialog-header">
+        <span class="player-ep-title" id="player-ep-title"></span>
+        <div class="player-dialog-actions">
+          <button class="player-icon-btn" id="player-fullscreen-btn" aria-label="Pantalla completa"
+            title="Pantalla completa">
+            <span class="material-symbols-outlined">fullscreen</span>
+          </button>
+          <button class="player-icon-btn" id="player-close-btn" aria-label="Cerrar reproductor" title="Cerrar">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="player-video-area" id="player-video-area">
+        <iframe id="player-iframe" src="" class="player-embed-frame" title="Reproductor de video" allowfullscreen
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture" scrolling="no"
+          referrerpolicy="no-referrer"></iframe>
+
+        <div id="player-loading" class="player-loading">
+          <div class="player-spinner"></div>
+          <span class="player-loading-text">Cargando video&hellip;</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- /player-overlay -->
+
+</body>
+
+</html>

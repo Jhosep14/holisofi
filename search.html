@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="alias_map.js"></script>
+  <script src="data.js"></script>
+  <script src="content_state.js"></script>
+  <script src="reference_images.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="app.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar Shell -->
+  <header class="site-header site-header--glass">
+    <div class="site-header-brand-group">
+      <a href="index.html" class="flex items-center shrink-0">
+        <img alt="Sofi TV" class="h-14 md:h-18 w-auto object-contain" src="images/logo.png" />
+      </a>
+      <nav class="site-header-links">
+        <a class="site-nav-link site-nav-link--pill" href="index.html">Home</a>
+        <a class="site-nav-link site-nav-link--pill" href="movies.html">Movies</a>
+        <a class="site-nav-link site-nav-link--pill" href="animes.html">Animes</a>
+        <a class="site-nav-link site-nav-link--pill" href="series.html">Series</a>
+        <a class="site-nav-link site-nav-link--pill" href="my_list.html">My List</a>
+      </nav>
+    </div>
+    <div class="site-header-actions">
+      <div class="site-header-actions site-header-actions--tight">
+        <a href="search.html" class="site-icon-link" aria-label="Buscar">
+          <span class="material-symbols-outlined" data-icon="search">search</span>
+        </a>
+        <button class="site-icon-button" type="button" data-icon="notifications">
+          <span class="material-symbols-outlined">notifications</span>
+        </button>
+      </div>
+      <div class="site-avatar-shell site-avatar-shell--compact site-avatar-shell--profile">
+        <img alt="User Profile Avatar" class="site-avatar-image clickable-avatar"
+          onclick="window.location.href='profile.html'"
+          data-alt="close-up portrait of a young man with a neutral expression and soft studio lighting on dark background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAviNwuUW8jp4fQNIpix_d7ye17yo-S9ccRCX5Z1WPAhiyLcSRx2fh5BrqvPK8H-VoYN3FbhHgkOr3Rg9v6hmzvnwKmkwHCoXLoLh-4Hn0h_XY66lAnTsB-JrBZsF4hkYqy75rvMmmkWn9Vj9AGtjctBCQktRKF7rJTnHxVq_rY72MgQKqBmoY9fAC9WGMQmfTuWihp0j9I4EbRVTLyzxV8TbdzxO7BqdUg9BOYBi2uunLr3ryjv2B1oI44k0CeH-a1fr0PEIF_2K0" />
+      </div>
+    </div>
+  </header>
+  <main class="pt-28 pb-20 px-8 md:px-16 max-w-7xl mx-auto">
+    <section class="mb-10">
+      <label class="sr-only" for="search-input">Buscar</label>
+      <div class="relative max-w-2xl">
+        <span
+          class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+        <input id="search-input"
+          class="w-full rounded-full border border-outline-variant/30 bg-surface-container-low pl-12 pr-4 py-4 text-sm text-on-surface outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20"
+          placeholder="Busca por titulo o alias..." type="text" />
+      </div>
+      <p id="search-status" class="mt-3 text-sm text-on-surface-variant">Explora por nombre, alias o categoria</p>
+    </section>
+    <div id="catalog-container" class="space-y-16 relative z-20 pb-20 w-full">
+    </div>
+  </main>
+  <!-- Footer Shell -->
+  <footer class="site-footer site-footer--spaced">
+    <div class="site-footer-grid site-footer-grid--two">
+      <div class="flex flex-col gap-6">
+        <span class="site-footer-brand">Digital Theater</span>
+        <p class="site-footer-copy max-w-sm">© 2024 Digital Theater. All rights reserved. Cinematic
+          Depth &amp; Tonal Precision. Experience movies as they were meant to be seen.</p>
+        <div class="site-footer-socials">
+          <span class="material-symbols-outlined site-footer-social" data-icon="facebook">social_leaderboard</span>
+          <span class="material-symbols-outlined site-footer-social" data-icon="movie">movie</span>
+          <span class="material-symbols-outlined site-footer-social" data-icon="podcasts">podcasts</span>
+        </div>
+      </div>
+      <div class="site-footer-links-grid">
+        <nav class="site-footer-link-column">
+          <a class="site-footer-link" href="#">Privacy Policy</a>
+          <a class="site-footer-link" href="#">Terms of Service</a>
+          <a class="site-footer-link" href="#">Help Center</a>
+        </nav>
+        <nav class="site-footer-link-column">
+          <a class="site-footer-link" href="#">Cookie Preferences</a>
+          <a class="site-footer-link" href="#">Contact Us</a>
+          <a class="site-footer-link" href="#">Careers</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

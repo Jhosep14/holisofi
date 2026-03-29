@@ -1,0 +1,9 @@
+{
+  "name": "sofi-tv-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update:content": "node scripts/update_content_state.mjs",
+    "extract:content": "node scripts/extract_new_content.mjs"
+  }
+}

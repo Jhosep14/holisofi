@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="alias_map.js"></script>
+  <script src="data.js"></script>
+  <script src="content_state.js"></script>
+  <script src="reference_images.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="app.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar Shell -->
+  <nav class="site-header site-header--glass site-header--gradient">
+    <div class="site-header-brand-group">
+      <a href="index.html" class="flex items-center shrink-0">
+        <img alt="Digital Theater" class="h-14 md:h-18 w-auto object-contain" src="images/logo.png" />
+      </a>
+      <div class="site-header-links">
+        <a class="site-nav-link" href="index.html">Home</a>
+        <a class="site-nav-link" href="movies.html">Movies</a>
+        <a class="site-nav-link" href="animes.html">Animes</a>
+        <a class="site-nav-link" href="series.html">Series</a>
+        <a class="site-nav-link site-nav-link--active" href="my_list.html">My List</a>
+      </div>
+    </div>
+    <div class="site-header-actions">
+      <a href="search.html" class="site-icon-link" aria-label="Buscar">
+        <span class="material-symbols-outlined">search</span>
+      </a>
+      <button class="site-icon-button" type="button" data-icon="notifications">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+      <div class="site-avatar-shell site-avatar-shell--rounded">
+        <img alt="User Profile Avatar" class="site-avatar-image clickable-avatar" onclick="window.location.href='profile.html'"
+          data-alt="Close up portrait of a stylish user with dramatic lighting on dark background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNe2T23OgwVaZ-SnOJj5-vZ3ZVTpQMdCZWkpaKqzWTKastuz0mFdGsjN1-EBAApmEnuQlRrj7Gsx2wgmtmqExHFusY0lN2JLQQDWASKX6NC8fUjN5R9y2A9noIwiNqNDoEHB312UN-Ms8oh2yJQ5DhUaPAOy_7Uw7lixZhU4rTVYsvAV24Wg54XNmxAtdmjaXlaAbhznFX8yke_0pfcdaK-vgMe1cwu0cDpJLRLlSutKp9AjiI4mOrHH8gE5W61NVjyLv4QhTeuTE" />
+      </div>
+    </div>
+  </nav>
+  <main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+
+    <div id="catalog-container" class="space-y-16 relative z-20 pb-20 w-full">
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-grid site-footer-grid--two">
+      <div class="space-y-4">
+        <span class="site-footer-brand site-footer-brand--headline">Digital Theater</span>
+        <p class="site-footer-copy max-w-sm">© 2024 Digital Theater. All rights reserved. Cinematic
+          Depth &amp; Tonal Precision. Your premium gateway to immersive storytelling.</p>
+      </div>
+      <div class="site-footer-links-wrap">
+        <a class="site-footer-link site-footer-link--accent" href="#">Privacy Policy</a>
+        <a class="site-footer-link site-footer-link--accent" href="#">Terms of Service</a>
+        <a class="site-footer-link site-footer-link--accent" href="#">Help Center</a>
+        <a class="site-footer-link site-footer-link--accent" href="#">Cookie Preferences</a>
+        <a class="site-footer-link site-footer-link--accent" href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

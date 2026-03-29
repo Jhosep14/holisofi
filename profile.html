@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Account Settings - Digital Theater</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface">
+  <!-- TopAppBar -->
+  <header class="site-header site-header--profile">
+    <a href="index.html" class="flex items-center shrink-0">
+      <img alt="Sofi TV" class="h-14 md:h-18 w-auto object-contain" src="images/logo.png" />
+    </a>
+    <nav class="site-header-links site-header-links--wide">
+      <a class="site-nav-link site-nav-link--plain" href="index.html">Home</a>
+      <a class="site-nav-link site-nav-link--plain" href="movies.html">Movies</a>
+      <a class="site-nav-link site-nav-link--plain" href="animes.html">Animes</a>
+      <a class="site-nav-link site-nav-link--plain" href="series.html">Series</a>
+      <a class="site-nav-link site-nav-link--plain" href="my_list.html">My List</a>
+    </nav>
+    <div class="site-header-actions">
+      <a href="search.html" class="site-icon-link site-nav-link--plain" aria-label="Buscar">
+        <span class="material-symbols-outlined">search</span>
+      </a>
+      <button class="site-icon-button site-icon-button--surface site-icon-button--scale site-icon-button--large"
+        type="button">
+        <span class="material-symbols-outlined">notifications</span>
+        <span class="site-icon-badge"></span>
+      </button>
+      <div class="site-avatar-shell site-avatar-shell--rounded site-avatar-shell--profile" aria-current="page">
+        <img alt="User Profile Avatar" class="site-avatar-image clickable-avatar"
+          onclick="window.location.href='profile.html'"
+          data-alt="close-up portrait of a young man with a friendly expression, soft cinematic studio lighting on a dark background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEzDLZomvF2MvDpHdE-pG3HysMeplp1K8TJr4jXhs5YwqxBKGWG43SuRay4geffhUXmBDx1tG12hQcInplDT8SYxp3Xd0QAhbzy6igRYE9xxdAlPrTeo9novRUEAPkYpf9Zzn_dCixeAnlBP7j7SdnbY87ZceYFAmUFHWBXCwxNMJGrV9rILOij7piJjN-N-BOC76JlfvynxDooKb-5vzLH4f5hDin3f5aE9sK32TduxBgGdKli60anTxrNl3yGojSShIC7WLTqJ8" />
+      </div>
+    </div>
+  </header>
+  <main class="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto min-h-screen">
+    <section class="mb-12">
+      <h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-2">Account Settings</h1>
+      <p class="text-on-surface-variant font-body">Manage your viewing experience, profiles, and playback preferences.
+      </p>
+    </section>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <aside class="lg:col-span-3 space-y-2">
+        <nav class="flex flex-col gap-1">
+          <a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface-container-high text-on-surface font-semibold border-l-4 border-primary-container"
+            href="#">
+            <span class="material-symbols-outlined">person</span>
+            Account Details
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">card_membership</span>
+            Subscription
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">settings_overscan</span>
+            Playback
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">group</span>
+            Profiles
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">security</span>
+            Privacy &amp; Security
+          </a>
+        </nav>
+      </aside>
+      <div class="lg:col-span-9 space-y-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="glass-card p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex items-center gap-4">
+                <div class="relative">
+                  <img alt="Primary Profile" class="w-20 h-20 rounded-2xl object-cover shadow-2xl"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhERfZ_T3m9tCPuqU9PKdFViKR5p7nvUh4JGYlGXZoXRM5uhTGBjd3lVLXOv6ZPdRC34maEFPsMwSk71mzVQ8muo4S6ve_S5JkJJCEXGBef-zJT5TlBJV8SxuPQo-q_5ATnJTnb02bVBlYmhqIUwASPohLHEb9MXjDOD3xBldyd0A3ynOolydaRGg4Y08517keyDdbEwURPLD0rJMldr2pyPjWZ5w6su9c2KAs5BGZlETZF51gqHN7sbtUtH-077t-uRkQpwQy8T8" />
+                  <button class="absolute -bottom-2 -right-2 bg-primary-container p-1.5 rounded-full shadow-lg"
+                    aria-label="Editar perfil">
+                    <span class="material-symbols-outlined text-sm text-on-primary-container">edit</span>
+                  </button>
+                </div>
+                <div>
+                  <h3 class="font-headline text-xl font-bold">Alex Thompson</h3>
+                  <p class="text-on-surface-variant text-sm">Primary Profile</p>
+                </div>
+              </div>
+              <span
+                class="px-3 py-1 bg-secondary-container/20 text-secondary-fixed-dim text-xs font-bold rounded-full border border-secondary-container/30 uppercase tracking-widest">Active</span>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="px-4 py-2 bg-surface-container-highest rounded-full text-xs font-semibold hover:bg-surface-bright transition-colors">Change
+                Name</button>
+              <button
+                class="px-4 py-2 bg-surface-container-highest rounded-full text-xs font-semibold hover:bg-surface-bright transition-colors">Manage
+                Ratings</button>
+            </div>
+          </div>
+          <div class="relative overflow-hidden p-8 rounded-3xl cinematic-gradient flex flex-col justify-between">
+            <div class="absolute top-0 right-0 opacity-10 translate-x-1/4 -translate-y-1/4">
+              <span class="material-symbols-outlined text-[160px] icon-fill">stars</span>
+            </div>
+            <div class="relative z-10">
+              <p class="text-on-primary-container/80 text-xs font-bold uppercase tracking-widest mb-1">Current Plan</p>
+              <h3 class="font-headline text-3xl font-black text-on-primary-container mb-4">PREMIUM 4K + HDR</h3>
+              <div class="flex items-center gap-2 text-on-primary-container/90 mb-6">
+                <span class="material-symbols-outlined text-sm">event</span>
+                <span class="text-sm font-medium">Renews on Oct 24, 2026</span>
+              </div>
+            </div>
+            <div class="relative z-10 flex gap-3">
+              <button
+                class="px-6 py-2.5 bg-on-primary-container text-primary-container font-bold rounded-full hover:scale-105 transition-transform">Manage
+                Plan</button>
+              <button
+                class="px-6 py-2.5 border border-on-primary-container/30 text-on-primary-container font-bold rounded-full hover:bg-on-primary-container/10 transition-colors">Receipts</button>
+            </div>
+          </div>
+        </div>
+        <section class="glass-card p-8 rounded-3xl border border-outline-variant/10">
+          <h2 class="font-headline text-2xl font-bold mb-8 flex items-center gap-3">
+            <span class="w-1.5 h-6 bg-primary-container rounded-full"></span>
+            Account Details
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
+            <div class="space-y-1">
+              <label class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Email Address</label>
+              <div class="flex justify-between items-center group">
+                <span class="text-on-surface font-medium">alex.t@digitaltheater.com</span>
+                <button
+                  class="text-primary-container opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold">Update</button>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <label class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Password</label>
+              <div class="flex justify-between items-center group">
+                <span class="text-on-surface font-medium">••••••••••••••••</span>
+                <button
+                  class="text-primary-container opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold">Change</button>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <label class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Phone Number</label>
+              <div class="flex justify-between items-center group">
+                <span class="text-on-surface font-medium">+1 (555) 000-9912</span>
+                <button
+                  class="text-primary-container opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold">Verify</button>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <label class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Billing Method</label>
+              <div class="flex justify-between items-center group">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary">credit_card</span>
+                  <span class="text-on-surface font-medium">Visa ending in 4421</span>
+                </div>
+                <button
+                  class="text-primary-container opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold">Edit</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="glass-card p-8 rounded-3xl border border-outline-variant/10">
+          <div class="flex justify-between items-end mb-8">
+            <h2 class="font-headline text-2xl font-bold flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-primary-container rounded-full"></span>
+              Profiles
+            </h2>
+            <button class="text-primary-container text-sm font-bold hover:underline">Manage All</button>
+          </div>
+          <div class="flex flex-wrap gap-8">
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+              <div
+                class="w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-primary-container ring-offset-4 ring-offset-surface shadow-2xl transition-transform group-hover:scale-110">
+                <img alt="Profile Alex" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3ZRxVHEd23z0JJJ0-rF2IKg_SJbO77dmP8rSCusLBksoJhKRYJh19bqSn3vMXRl2BRKmI37j04aCBEDkLP2JF6I8rRE3agCAxUrm1l8YhJQSbEy-TbZHmY5V5WDW4tJc0jqxDjGVUz-5JNUXnaoNKpziWEnymT9qq5MD1PfdqZCTyXPpohlgH17waAo4Uo1hsLTfuhz8lPHuhPgbp2aLjdqBvdWcnUHjmZeveVvWF4vVh2uHyEv2JLHh8fhjfgucEgn5qEJHHwwg" />
+              </div>
+              <span class="font-bold text-sm">Alex</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer opacity-60 hover:opacity-100">
+              <div class="w-20 h-20 rounded-2xl overflow-hidden shadow-xl transition-transform group-hover:scale-110">
+                <img alt="Profile Sarah" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwHJ3GfNuxJdas_eD1azOX3ozFCOymQdRUWSJzOit-Y5AN-82qQ7ZC3kcc-Vhx5ve3eOgFI-og7tA0gSNKqnsoVCJByA42W34AXwfIt2AUkTmySi_KZ2vq3lOc9-H6rqGXPeqQq7GTNuL0_-rcGKbTDwTdDoi-0RiMSGFHqOKRDYDomAIccDV993OLhEy-ljR8YBc5MbVcGa0U-7x1LwYrFiqdfSnCdkqFYhd-VU144gNd_Hl5RplCYcfo5y8Epw0ZfEH2YM-Kajs" />
+              </div>
+              <span class="font-bold text-sm">Sarah</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer opacity-60 hover:opacity-100">
+              <div class="w-20 h-20 rounded-2xl overflow-hidden shadow-xl transition-transform group-hover:scale-110">
+                <img alt="Profile Leo" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO1Db-c8XJp9HQu-c9KIFkB0zmwUZL0p4gNGN5C91hAeXRywsM3VjumrzLzFP_SjPSdx6eHf5d_lSYN2cZXUCtohobHVmmKJ8KxVeLmQoEfJX5s9qJCBQ9WTlNxmyE4ZkDyQvv0NiQpeWtXiM-xjhbSfM8L2wYDma6pU3atFkl1GO1GjDBl6G0cVwuM4J3DKWwsQG7uO81ksr9tDu8v-EFEyKDCRixPLK4ye3rl4l-o5Nzp9p8WvSJ9DTatc0wC7_5-J_gpbY2Q8U" />
+              </div>
+              <span class="font-bold text-sm">Leo</span>
+            </div>
+            <div class="flex flex-col items-center gap-3 group cursor-pointer">
+              <div
+                class="w-20 h-20 rounded-2xl bg-surface-container-highest border-2 border-dashed border-outline-variant flex items-center justify-center transition-all group-hover:bg-surface-bright group-hover:border-primary">
+                <span
+                  class="material-symbols-outlined text-3xl text-outline-variant group-hover:text-primary">add</span>
+              </div>
+              <span class="font-bold text-sm text-on-surface-variant group-hover:text-on-surface">Add Profile</span>
+            </div>
+          </div>
+        </section>
+        <section class="glass-card p-8 rounded-3xl border border-outline-variant/10">
+          <h2 class="font-headline text-2xl font-bold mb-8 flex items-center gap-3">
+            <span class="w-1.5 h-6 bg-primary-container rounded-full"></span>
+            Playback Settings
+          </h2>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl gap-4">
+              <div>
+                <h4 class="font-bold">Video Quality</h4>
+                <p class="text-xs text-on-surface-variant">Always stream in the highest resolution available.</p>
+              </div>
+              <select
+                class="bg-surface-container-high border-none rounded-lg text-sm font-semibold focus:ring-1 focus:ring-primary-container">
+                <option>Auto</option>
+                <option selected="">Always Ultra HD</option>
+                <option>Data Saver</option>
+              </select>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl gap-4">
+              <div>
+                <h4 class="font-bold">Autoplay Next Episode</h4>
+                <p class="text-xs text-on-surface-variant">Automatically play the next episode in a series.</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input checked="" class="sr-only peer" type="checkbox" />
+                <div
+                  class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container">
+                </div>
+              </label>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl gap-4">
+              <div>
+                <h4 class="font-bold">Subtitle Appearance</h4>
+                <p class="text-xs text-on-surface-variant">Current: White, Medium, Drop Shadow.</p>
+              </div>
+              <button class="text-sm font-bold text-primary-container">Customize</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer site-footer--profile">
+    <div class="site-footer-grid site-footer-grid--four">
+      <div class="col-span-2 md:col-span-1">
+        <div class="site-footer-brand site-footer-brand--headline site-footer-brand--accent mb-4">Digital Theater
+        </div>
+        <p class="site-footer-copy site-footer-copy--muted max-w-xs leading-relaxed">Experience cinema like never
+          before. High-definition
+          streaming for the modern enthusiast.</p>
+      </div>
+      <div>
+        <h5 class="text-neutral-50 font-bold mb-4">Platform</h5>
+        <ul class="space-y-2">
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Browse</a></li>
+          <li><a class="site-footer-link site-footer-link--muted" href="#">New
+              Releases</a></li>
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Devices</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-neutral-50 font-bold mb-4">Company</h5>
+        <ul class="space-y-2">
+          <li><a class="site-footer-link site-footer-link--muted" href="#">About Us</a>
+          </li>
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Jobs</a></li>
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Media
+              Center</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-neutral-50 font-bold mb-4">Support</h5>
+        <ul class="space-y-2">
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Help Center</a>
+          </li>
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Account</a>
+          </li>
+          <li><a class="site-footer-link site-footer-link--muted" href="#">Privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-bottom site-footer-bottom--profile">
+      <p class="site-footer-copy site-footer-copy--muted">© 2024 Digital Theater. All rights reserved.</p>
+      <div class="site-footer-socials">
+        <a class="site-footer-social site-footer-social--muted" href="#"><span
+            class="material-symbols-outlined">social_leaderboard</span></a>
+        <a class="site-footer-social site-footer-social--muted" href="#"><span
+            class="material-symbols-outlined">alternate_email</span></a>
+        <a class="site-footer-social site-footer-social--muted" href="#"><span
+            class="material-symbols-outlined">play_circle</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
